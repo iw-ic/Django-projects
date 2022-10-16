@@ -1,0 +1,6 @@
+create a template folder inside the main project folder with name "templates"
+this will have all html files that we want to display or return to the wep page
+change in settings.py: TEMPLATES->DIRS -> add in '' the name of folder where we want it to find html files which is in our case 'templates'
+create views.py inside wordcount(in same folder as of settings.py and url.py)
+in views.py create a func using def that takes the parameter 'request' and return render(request,'xyz.html') here xyz is the name of html page present inside 'templates' folder, which we want to return 
+change urls.py and from . import views.py -> create various paths and corresponding function names present in views.py to return/display particular html page
