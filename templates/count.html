@@ -1,0 +1,12 @@
+<h1>WORD COUNT</h1>
+<a href = "{% url 'home'%}">Start Again!</a>"
+<h2>Your text:</h2>
+{{fulltext}}
+
+<h2>Your text has {{wordcount}} words out of which {{unique_word_count}} are unique words.</h2>
+
+<h2>Unique Words and the number of times each was repeated:</h2>
+{% for word, uniquecount in wordcount_dict %}
+{{word}}: {{uniquecount}}
+<br />
+{%endfor %}
